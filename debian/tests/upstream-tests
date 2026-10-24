@@ -1,0 +1,8 @@
+#!/bin/sh
+# dep-8 compatible wrapper for ccrypt upstream tests
+
+export srcdir=./check
+export CHECK_CCRYPT=/usr/bin/ccrypt
+export TMPDIR="$AUTOPKGTEST_TMP"
+$srcdir/ccrypt-check.sh || ( echo "$0: upstream tests failed" >&2 ; exit 1 )
+

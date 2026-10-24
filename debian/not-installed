@@ -1,0 +1,3 @@
+# Handled by dh_elpa differently
+usr/share/emacs/site-lisp/ps-ccrypt.el
+usr/share/emacs/site-lisp/ps-ccrypt.elc

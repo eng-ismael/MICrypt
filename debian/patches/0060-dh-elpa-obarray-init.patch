@@ -1,0 +1,22 @@
+Description: Fixes creation of an obarray.
+ See https://sourceforge.net/p/ccrypt/bugs/30/ for more details.
+Author: Dan Christensen, https://sourceforge.net/u/jdc/profile/ 
+Origin: upstream, https://sourceforge.net/p/ccrypt/bugs/30/#eefe
+Bug: https://sourceforge.net/p/ccrypt/bugs/30/
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1100400
+Forwarded: not-needed
+Reviewed-by: Sven Geuer <sge@debian.org>
+Last-Update: 2025-03-14
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/emacs/ps-ccrypt.el
++++ b/emacs/ps-ccrypt.el
+@@ -486,7 +486,7 @@
+   :type 'string
+   :group 'ps-ccrypt)
+ 
+-(defvar ps-ccrypt-temp-name-table (make-vector 31 nil))
++(defvar ps-ccrypt-temp-name-table (make-vector 31 0))
+ 
+ (defun ps-ccrypt-make-temp-name (&optional local-copy)
+   "This routine will return the name of a new file."

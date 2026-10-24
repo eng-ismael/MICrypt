@@ -1,0 +1,299 @@
+ccrypt (1.11-7) unstable; urgency=medium
+
+  * Team upload.
+  * d/p/*: Add patch to fix encryption of files of size 4G-1
+    (Closes: #1143995).
+  * d/control:
+    - Drop 'Priority: optional'.
+    - Drop 'Rules-Requires-Root: no'.
+    - Bump Standards-Version.
+    - Bump debhelper-compat to 14. Consequently, drop all ${*:Depends}
+      substvar mentionings.
+  * d/copyright: Bump packaging copyright years.
+  * d/gbp.conf: Set upstream-branch and debian-branch to */latest.
+
+ -- Sven Geuer <sge@debian.org>  Sun, 09 Aug 2026 18:12:23 +0200
+
+ccrypt (1.11-6) unstable; urgency=medium
+
+  * Team upload.
+  * d/control: Add libcrypt-dev to Build-Depends (Closes: #1106970).
+  * d/copyright: Replace FSF postal address by URL.
+  * d/watch: Convert it to version 5 format.
+  * d/*: Apply 'wrap-and-sort -at'.
+
+ -- Sven Geuer <sge@debian.org>  Thu, 25 Sep 2025 12:34:26 +0200
+
+ccrypt (1.11-5) unstable; urgency=medium
+
+  * Team upload.
+  * d/salsa-ci.yml: Drop erroneously added variable
+    SALSA_CI_DISABLE_BUILD_PACKAGE_ALL.
+  * d/p/*: Add patch to fix creation of a list of type obarray
+    (Closes: #1100400).
+  * d/copyright: Bump Debian copyright years and update my email address
+    to the d.o one.
+  * d/control: Bump Standards-Version to 4.7.2.
+
+ -- Sven Geuer <sge@debian.org>  Fri, 14 Mar 2025 20:44:06 +0100
+
+ccrypt (1.11-4) unstable; urgency=medium
+
+  * Team upload.
+  * Rebuild against dh-elpa >= 2.1.5 (Closes: #1077098).
+  * d/salsa-ci.yml: Add variable SALSA_CI_DISABLE_BUILD_PACKAGE_ALL.
+  * d/control: Update Standards-Version to 4.7.0.
+
+ -- Sven Geuer <sge@debian.org>  Fri, 26 Jul 2024 15:21:48 +0200
+
+ccrypt (1.11-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable)
+
+  [ Sven Geuer ]
+  * Fix watch file.
+  * Update d/control:
+    - Specify Rules-Requires-Root.
+    - Bump Standards-Version to 4.6.2.
+    - Update http:// to https:// with Homepage.
+    - Change package elpa-ps-ccrypt to Section: editors as suggested by
+      lintian.
+    - Apply 'wrap-and-sort -a'.
+  * Update d/copyright:
+    - Source:
+      - Update http:// to https://.
+    - Comment:
+      - Insert a line break for readability.
+    - Files: *
+      - Bump years and add the email address of the copyright holder.
+    - Files: debian/*
+      - Add missing entries.
+  * Update d/u/metadata:
+    - Rewrite d/u/metadata from scratch.
+    - Override lintian issue upstream-metadata-missing-repository.
+  * Update d/p/*:
+    - Revise patch headers to comply with DEP-3.
+    - Mark patch 0020-man-page-spelling-error.patch as forwarded providing
+      the upstream URL.
+  * Add a missing entry to the previous changelog.
+
+ -- Arnaud Rebillout <arnaudr@kali.org>  Thu, 29 Feb 2024 08:21:36 +0700
+
+ccrypt (1.11-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Samuel Henrique ]
+  * Add salsa-ci.yml
+  * Configure git-buildpackage for Debian
+
+  [ Debian Janitor ]
+  * Wrap long lines in changelog entries: 1.6-1.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Submit (from ./configure).
+
+  [ Raphaël Hertzog ]
+  * Rebuild with dh-elpa >= 2 (Closes: #973965)
+  * Switch to debhelper compat level 13
+  * Bump Standards-Version to 4.5.1
+  * Update watch file format version to 4.
+  * Let dh_missing ignore lisp files handled by dh_elpa.
+
+ -- Raphaël Hertzog <hertzog@debian.org>  Sun, 29 Nov 2020 14:01:11 +0100
+
+ccrypt (1.11-1) unstable; urgency=medium
+
+  * New upstream version 1.11
+  * Autotools and man formatting patches are no longer necessary
+
+ -- Alexander Kulak <sa-dev@rainbow.by>  Sat, 28 Jul 2018 14:36:17 +0300
+
+ccrypt (1.10-7) unstable; urgency=low
+
+  * Fix removing obsoleted conffile (closes: #893687)
+
+ -- Alexander Kulak <sa-dev@rainbow.by>  Tue, 03 Apr 2018 14:00:00 +0300
+
+ccrypt (1.10-6) unstable; urgency=low
+
+  * Remove obsoleted conffile (closes: #893687)
+  * Warn about separate emacs addon in README
+
+ -- Alexander Kulak <sa-dev@rainbow.by>  Mon, 02 Apr 2018 10:00:00 +0300
+
+ccrypt (1.10-5) unstable; urgency=medium
+
+  * New maintainer (closes: #879649)
+  * Separate emacs addon into distinct binary package (closes: #623762,
+    #772894)
+  * Bump standards to current
+  * Adopt to current autotools and gettext
+  * Add dep-8 testsuite
+
+ -- Alexander Kulak <sa-dev@rainbow.by>  Tue, 13 Mar 2018 21:00:00 +0300
+
+ccrypt (1.10-4) unstable; urgency=low
+
+  * Hardening binary
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Mon, 07 Apr 2014 00:30:00 +0800
+
+ccrypt (1.10-3) unstable; urgency=low
+
+  * Fixed changelog
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Sun, 30 Mar 2014 01:50:40 +0800
+
+ccrypt (1.10-2) unstable; urgency=low
+
+  * Fixed man formatting error (closes: #742906)
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Sun, 30 Mar 2014 01:31:33 +0800
+
+ccrypt (1.10-1) unstable; urgency=low
+
+  * New upstream version
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Use autotools helper for newer arches (by Daniel T Chen)
+  * Time has solved bug LP: #282411
+  * New build system hopefully closes: #727338
+  * New upstream version closes: #623764, LP: #486730
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Mon, 24 Mar 2014 21:36:51 +0800
+
+ccrypt (1.9-4) unstable; urgency=low
+
+  * removed comment on incompatibility with jka-compr as no longer relevant
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Sun, 29 May 2011 18:28:18 +0800
+
+ccrypt (1.9-3) unstable; urgency=low
+
+  * changed all references from jka-compr-ccrypt to ps-ccrypt
+  * hopefully closes: #628470
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Sun, 29 May 2011 18:09:48 +0800
+
+ccrypt (1.9-2) unstable; urgency=low
+
+  * removed cfs conflict (closes: #454093)
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Sun, 29 May 2011 17:44:15 +0800
+
+ccrypt (1.9-1) unstable; urgency=low
+
+  * new upstream version (closes: #603468)
+  * moved from debhelper to dh
+  * updated standards version
+  * updated URL in copyright file (closes: #623755)
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Mon, 23 May 2011 21:50:58 +0800
+
+ccrypt (1.7-11) unstable; urgency=low
+
+  * reapplied patch to fix unaligned references problems on IA64
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Wed, 23 May 2007 18:08:08 +0200
+
+ccrypt (1.7-10) unstable; urgency=low
+
+  * updated standards version to 3.7.2
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Wed, 23 May 2007 17:43:41 +0200
+
+ccrypt (1.7-9) unstable; urgency=low
+
+  * added patch to fix unaligned references problems on IA64 (closes: #347493)
+  * changed email address
+
+ -- Chris Vanden Berghe <chrisvdb@debian.org>  Fri, 13 Jan 2006 08:37:26 +0100
+
+ccrypt (1.7-8) unstable; urgency=low
+
+  * Updated package to latest standards version (no changes).
+  * Added watch file.
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Sun, 14 Aug 2005 18:41:32 +0200
+
+ccrypt (1.7-7) unstable; urgency=low
+
+  * Fixed bug in options handling (closes: #298681).
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Wed,  9 Mar 2005 21:25:33 +0100
+
+ccrypt (1.7-6) unstable; urgency=low
+
+  * Implemented suggestion from Marc Brockschmidt:
+    - removed INSTALL_PROGRAM magic from rules file
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Wed, 12 Jan 2005 20:53:37 +0100
+
+ccrypt (1.7-5) unstable; urgency=low
+
+  * Added 'Conflicts: cfs' to control file (closes: #274786).
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Tue,  5 Oct 2004 19:51:21 +0200
+
+ccrypt (1.7-4) unstable; urgency=low
+
+  * Made text in README.Debian clearer.
+  * Removed some temporary files from the source.
+  * Updated to standards-version 3.6.1.1 (no changes necessary)
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Mon, 28 Jun 2004 22:51:34 +0200
+
+ccrypt (1.7-3) unstable; urgency=low
+
+  * Disabled xemacs script installation since it is incompatible with xemacs
+    and prevented successful installation of ccrypt when xemacs is installed.
+    Emacs functionality is untouched and should work. (closes: #255661)
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Wed, 23 Jun 2004 15:10:37 +0200
+
+ccrypt (1.7-2) unstable; urgency=low
+
+  * Updated to standards-version 3.6.1.0 (no changes necessary)
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Wed, 23 Jun 2004 11:20:03 +0200
+
+ccrypt (1.7-1) unstable; urgency=low
+
+  * New upstream version (closes: #241643).
+  * Installs the 'jka-compr-ccrypt' emacs package that allows transparent
+    editing of encrypted files.
+  * The ccrypt package has a new maintainer.
+
+ -- Chris Vanden Berghe <Chris@VandenBerghe.org>  Wed, 16 Jun 2004 20:58:13 +0200
+
+ccrypt (1.6-1) unstable; urgency=low
+
+  * New upstream version.
+  * Removed the cccat renaming and conflict with cfs (closes: #180915).
+  * debian/rules clean remove configure generated files.
+  * Fix gcc 3.3 cleanups (multi-line and reserved word warnings) (closes:
+    194875).
+
+ -- Jean-Francois Dive <jef@debian.org>  Sun,  7 Sep 2003 21:46:53 +0200
+
+ccrypt (1.2-3) unstable; urgency=high
+
+  * Fixed name colision (yes, one more)  (Closes: #163050, 163482).
+
+ -- Jean-Francois Dive <jef@debian.org>  Wed,  9 Oct 2002 08:46:33 +1000
+
+ccrypt (1.2-2) unstable; urgency=high
+
+  * Fixed name colistion with cfs package for ccat (Closes: #160749).
+  * Fixed long description. (Closes: #162886).
+
+ -- Jean-Francois Dive <jef@debian.org>  Tue,  1 Oct 2002 08:04:59 +1000
+
+ccrypt (1.2-1) unstable; urgency=high
+
+  * Initial Debianization (Closes: #159537).
+
+ -- Jean-Francois Dive <jef@debian.org>  Wed,  4 Sep 2002 10:20:25 +1000

@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+PREFIX = /usr
+
+# for dh-elpa
+include /usr/share/dpkg/pkg-info.mk
+export DEB_VERSION_UPSTREAM
+
+# prevent hardening-no-bindnow
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --with elpa -v

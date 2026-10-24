@@ -1,0 +1,62 @@
+# Compiled files
+*.o
+*.lo
+*.la
+*.a
+*.so
+*.Po
+*.Plo
+.deps/
+.libs/
+
+# Generated build files
+Makefile
+Makefile.in
+config.log
+config.status
+config.cache
+config.h
+config.h.in
+config.h.in~
+stamp-h1
+libtool
+autom4te.cache/
+aclocal.m4
+configure
+depcomp
+install-sh
+missing
+ltmain.sh
+test-driver
+m4/
+*.gmo
+
+# Local test files
+demo.txt
+test.txt
+*.cpt
+
+# Editor and backup files
+*~
+*.swp
+*.swo
+
+# Debian patch state
+.pc/
+
+# Backup files
+*.backup
+
+# Test outputs
+*.log
+*.trs
+check/ccrypt3-check
+check/rijndael-check
+check/crypt3-check
+check/nullidata
+
+# Generated binaries
+src/ccrypt
+src/cencrypt
+src/cdecrypt
+src/ccat

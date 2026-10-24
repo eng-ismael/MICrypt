@@ -1,0 +1,13 @@
+Description: Ensure dh-elpa compatibility
+Forwarded: not-needed
+Author: Alexander Kulak <sa-dev@rainbow.by>
+Last-Update: 2018-03-13
+
+--- a/emacs/ps-ccrypt.el
++++ b/emacs/ps-ccrypt.el
+@@ -1019,4 +1019,4 @@ The return value is the entry in `file-name-handler-alist' for ps-ccrypt."
+ 
+ (provide 'ps-ccrypt)
+ 
+-;; ps-ccrypt.el ends here.
++;;; ps-ccrypt.el ends here.

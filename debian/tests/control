@@ -1,0 +1,2 @@
+Tests: upstream-tests,
+Restrictions: allow-stderr,

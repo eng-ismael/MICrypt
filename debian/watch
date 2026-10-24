@@ -1,0 +1,3 @@
+Version: 5
+Source: https://sf.net/@PACKAGE@/
+Matching-Pattern: @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

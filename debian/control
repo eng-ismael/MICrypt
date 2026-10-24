@@ -1,0 +1,37 @@
+Source: ccrypt
+Section: utils
+Maintainer: Debian Security Tools <team+pkg-security@tracker.debian.org>
+Uploaders: Alexander Kulak <sa-dev@rainbow.by>,
+Build-Depends: debhelper-compat (= 14),
+               dh-elpa (>= 2),
+               libcrypt-dev,
+Standards-Version: 4.7.4
+Vcs-Git: https://salsa.debian.org/pkg-security-team/ccrypt.git
+Vcs-Browser: https://salsa.debian.org/pkg-security-team/ccrypt
+Homepage: https://ccrypt.sourceforge.net/
+
+Package: ccrypt
+Architecture: any
+Suggests: elpa-ps-ccrypt,
+Description: secure encryption and decryption of files and streams
+ ccrypt is a utility for encrypting and decrypting files and streams. It was
+ designed as a replacement for the standard unix crypt utility, which is
+ notorious for using a very weak encryption algorithm. ccrypt is based on the
+ Rijndael cipher, which is the U.S. government's chosen candidate for the
+ Advanced Encryption Standard (AES, see http://www.nist.gov/aes). This cipher is
+ believed to provide very strong security.
+
+Package: elpa-ps-ccrypt
+Section: editors
+Architecture: all
+Recommends: emacs,
+Enhances: emacs,
+          emacs24,
+          emacs25,
+Description: Emacs addon for working with files encrypted with ccrypt
+ elpa-ps-ccrypt provides low-level support for reading, writing, and
+ loading files encrypted with ccrypt. It hooks into the low-level file I/O
+ functions (including write-region and insert-file-contents) so that they
+ automatically encrypt or decrypt a file if the file appears to need it
+ (based on the extension of the file name). Packages like Rmail, VM, GNUS,
+ and Info should be able to work with encrypted files without modification.

@@ -1,0 +1,9 @@
+elpa-ps-ccrypt for Debian
+-------------------------
+
+This package installs an Emacs addon that enables transparent editing
+of files encrypted with ccrypt. The addon follows ELPA standard and
+should be available in all supported Emacs flavors.
+See /usr/share/emacs/site-lisp/elpa-src/ps-ccrypt-1.11/ps-ccrypt.el for
+usage instructions and limitations.
+

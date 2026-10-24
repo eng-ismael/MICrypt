@@ -1,0 +1,22 @@
+Description: Fix encryption of files of size 4G-1
+Origin: https://sourceforge.net/p/ccrypt/bugs/_discuss/thread/227381baea/231c/attachment/ccrypt-bug31-patch.diff
+Bug: https://sourceforge.net/p/ccrypt/bugs/31/
+Bug-Debian: https://bugs.debian.org/1143995
+Forwarded: not-needed
+Reviewed-by: Sven Geuer <sge@debian.org>
+Last-Update: 2026-08-09
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+diff --git a/src/ccrypt.c b/src/ccrypt.c
+index 7523798..ef74b26 100644
+--- a/src/ccrypt.c
++++ b/src/ccrypt.c
+@@ -453,7 +453,7 @@ static int filehandler(ccrypt_stream_t *b, workfun *work, endfun *end,
+   char outbuf[FILEINBUFSIZE+32];
+   int inbufsize, outbufsize;
+   off_t offs;
+-  int r;
++  off_t r;
+   int i;
+   int eof=0;
+   int err, cerr;

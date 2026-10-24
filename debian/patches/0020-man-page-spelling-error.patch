@@ -1,0 +1,16 @@
+Description: Fix spelling error in manual page
+Forwarded: https://sourceforge.net/p/ccrypt/bugs/29/
+Author: Alexander Kulak <sa-dev@rainbow.by>
+Last-Update: 2018-03-13
+
+--- a/doc/ccrypt.1.in
++++ b/doc/ccrypt.1.in
+@@ -342,7 +342,7 @@ xor to obtain information about the corresponding plaintext blocks
+ secure as the underlying block cipher.
+ 
+ In \fBccrypt\fP, the seed is constructed as follows: first, a nonce is
+-contructed by hashing a combination of the host name, current time,
++constructed by hashing a combination of the host name, current time,
+ process id, and an internal counter into a 28-byte value, using a
+ cryptographic hash function. The nonce is combined with a fixed
+ four-byte "magic number", and the resulting 32-byte value is encrypted
