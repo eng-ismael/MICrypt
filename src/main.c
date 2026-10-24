@@ -40,7 +40,12 @@ cmdline cmd;
 /* print usage information */
 
 static void usage(FILE *fout) {
-  fprintf(fout, _("%s %s. Secure encryption and decryption of files and streams.\n"), NAMECCRYPT, VERSION);
+  fprintf(fout, "MICrypt v1.0.0\n");
+  fprintf(fout, "File Encryption & Decryption Tool\n");
+  fprintf(fout, "Developed by Eng. Ismael\n");
+  fprintf(fout, "Website: https://engismael.com\n");
+  fprintf(fout, "Based on ccrypt 1.11 by Peter Selinger\n");
+  fprintf(fout, "Licensed under GPL v2 or later\n");
   fprintf(fout, "\n");
   fprintf(fout,
 _("Usage: %s [mode] [options] [file...]\n"
@@ -95,7 +100,12 @@ static void version(FILE *fout) {
 }
 
 static void license(FILE *fout) {
-  fprintf(fout, _("%s %s. Secure encryption and decryption of files and streams.\n"), NAMECCRYPT, VERSION);
+  fprintf(fout, "MICrypt v1.0.0\n");
+  fprintf(fout, "File Encryption & Decryption Tool\n");
+  fprintf(fout, "Developed by Eng. Ismael\n");
+  fprintf(fout, "Website: https://engismael.com\n");
+  fprintf(fout, "Based on ccrypt 1.11 by Peter Selinger\n");
+  fprintf(fout, "Licensed under GPL v2 or later\n");
   fprintf(fout, _("Copyright (C) 2000-2018 Peter Selinger.\n"));
   fprintf(fout, "\n");
   fprintf(fout,
